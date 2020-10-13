@@ -6,7 +6,7 @@ struct StudentGpa
 {
     int serialNo;
     int studentRollNo;
-    const char* studentName[200];
+    const char *studentName[200];
     double studentGpa;
 };
 
