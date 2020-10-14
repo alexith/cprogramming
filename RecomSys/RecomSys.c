@@ -45,16 +45,16 @@ int main()
     //taking input for task 
     scanf("choose the option key [c / f / u / d]: %c", task);
 
-    if (task == "c")
+    if (strcmp(task, "c"))
     {
         printf("What form of art do you wish to consume today [enter below movie, music, etc]?: ");
         scanf("%s", artForm);
 
-        if (artForm == "movie")
+        if (strcmp(artForm, "movie"))
         {
             struct ArtForm movie;
         }
-        else if (artForm == "music")
+        else if (strcmp(artForm, "music"))
         {
             struct ArtForm music;
         }
