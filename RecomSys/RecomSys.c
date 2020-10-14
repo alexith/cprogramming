@@ -42,9 +42,9 @@ int main()
 
     printf("\nHello %s,\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\nc: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art form\n", firstName);
     //taking input for task 
-    scanf("choose the option key [c / f / u / d]: %s", task);
+    scanf("choose the option key [c / f / u / d]: %s", task[1]);
 
-    if (strncmp(task, "c", 1))
+    if (strncmp(task[1], "c", 1))
     {
         printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", artForm);
