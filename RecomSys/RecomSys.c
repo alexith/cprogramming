@@ -13,7 +13,7 @@
 
 struct ArtForm
 {
-    char name[75];
+    char name[50];
     int releaseYear;
     char genre[20];
     char description[200];
@@ -31,7 +31,7 @@ int main()
     
     char* task;
     char artForm[20];
-    char artName[30];
+    char artName[50];
 
     //know the user
 
@@ -53,19 +53,19 @@ int main()
         {
             struct ArtForm movie;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
-            artName[25] = scanf("%s", movie.name);
+            artName[35] = scanf("%s", movie.name);
         }
         else if (strncmp(artForm, "music", 5))
         {
             struct ArtForm music;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
-            artName[25] = scanf("%s", music.name);
+            artName[35] = scanf("%s", music.name);
         }
         else
         {
             struct ArtForm others;
             printf("That\'s interesting,\n\ndo you like to specify the name of the %s:\n", artForm);
-            artName[25] = scanf("%s", others.name);
+            artName[35] = scanf("%s", others.name);
         }
 
         printf("You added new %s to the library\n", artName);
