@@ -29,7 +29,7 @@ int main()
 
     char todaysSpecial[20];
     
-    char task[1];
+    const char* task[1];
     char artForm[20];
     char artName[75];
 
@@ -44,18 +44,18 @@ int main()
     //taking input for task 
     scanf("choose the option key [c / f / u / d]: %s", task);
 
-    if (strncmp(task, "c"))
+    if (strncmp(task, "c", 1))
     {
         printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", artForm);
 
-        if (strcmp(artForm, "movie"))
+        if (strncmp(artForm, "movie", 5))
         {
             struct ArtForm movie;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
             artName[25] = scanf("%s", movie.name);
         }
-        else if (strcmp(artForm, "music"))
+        else if (strncmp(artForm, "music", 5))
         {
             struct ArtForm music;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
