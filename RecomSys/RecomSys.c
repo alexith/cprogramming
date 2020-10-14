@@ -29,9 +29,9 @@ int main()
 
     char todaysSpecial[20];
     
-    const char* task[1];
+    char* task;
     char artForm[20];
-    char artName[75];
+    char artName[30];
 
     //know the user
 
@@ -42,9 +42,9 @@ int main()
 
     printf("\nHello %s,\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\nc: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art form\n", firstName);
     //taking input for task 
-    scanf("choose the option key [c / f / u / d]: %s", task[1]);
+    scanf("choose the option key [c / f / u / d]: %s", task);
 
-    if (strncmp(task[1], "c", 1))
+    if (strncmp(task, "c", 1))
     {
         printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", artForm);
@@ -68,7 +68,7 @@ int main()
             artName[25] = scanf("%s", others.name);
         }
 
-        printf("You added new %s to the library", artName);
+        printf("You added new %s to the library\n", artName);
     }
 
     return 0;
