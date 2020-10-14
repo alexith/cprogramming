@@ -29,7 +29,7 @@ int main()
 
     char todaysSpecial[20];
     
-    char* task;
+    char task[1];
     char artForm[20];
     char artName[75];
 
@@ -40,30 +40,36 @@ int main()
 
     //Mr. AFRSys greets user
 
-    printf("Hello %s,\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\n c: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art from", firstName);
-
+    printf("\nHello %s,\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\nc: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art form\n", firstName);
     //taking input for task 
-    scanf("choose the option key [c / f / u / d]: %c", task);
+    scanf("choose the option key [c / f / u / d]: %s", task);
 
     if (strcmp(task, "c"))
     {
-        printf("What form of art do you wish to consume today [enter below movie, music, etc]?: ");
+        printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", artForm);
 
         if (strcmp(artForm, "movie"))
         {
             struct ArtForm movie;
+            printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
+            artName[25] = scanf("%s", movie.name);
         }
         else if (strcmp(artForm, "music"))
         {
             struct ArtForm music;
+            printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
+            artName[25] = scanf("%s", music.name);
         }
         else
         {
             struct ArtForm others;
+            printf("That\'s interesting,\n\ndo you like to specify the name of the %s:\n", artForm);
+            artName[25] = scanf("%s", others.name);
         }
-        printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
-        scanf("%s", artForm);
+
+        printf("You added new %s to the library", artName);
     }
+    
     return 0;
 }
