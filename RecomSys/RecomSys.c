@@ -44,7 +44,7 @@ int main()
     //taking input for task 
     scanf("choose the option key [c / f / u / d]: %s", task);
 
-    if (strcmp(task, "c"))
+    if (strncmp(task, "c"))
     {
         printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", artForm);
@@ -70,6 +70,6 @@ int main()
 
         printf("You added new %s to the library", artName);
     }
-    
+
     return 0;
 }
