@@ -41,7 +41,7 @@ int main()
 
     //Mr. AFRSys greets user
 
-    std::cout << "\nHello " << userName << ",\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\nc: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art form\nchoose the option key : [c / f / u / d]\n";
+    std::cout << "\nHello " << userName << ",\n\ndo you like to add your recent fav. movie or search for some movie randomly from available obscure movies\n[for e.g. key: task\nc: to create a new art\nf: to find movie/music/podcast,\nu: to update already present art,\nd: to delete prev. added art form\n\nchoose the option key : [c / f / u / d]\n";
     std::cin >> task;
 
     //user create new category of art
@@ -64,7 +64,7 @@ int main()
         {
             class Artform music;
             std::cout << "That\'s interesting,\ndo you like to specify the name of the " + artForm + ":\n";
-            std::cin >> music.name;
+            getline(std::cin, music.name);
             std::cout << "You added new " + music.name + " to the library\n";
         }
         else
@@ -72,7 +72,7 @@ int main()
             class Artform others;
             std::cout << "That\'s interesting,\ndo you like to specify the name of the " + artForm + ":\n";
             std::cin >> others.name;
-            std::cout << "You added new " + others.name + "to the library\n";
+            std::cout << "You added new " + others.name + " to the library\n";
         }
     }
 
