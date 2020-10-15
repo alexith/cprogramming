@@ -1,15 +1,20 @@
 /********************************************
  * 
+ * 
  *      ART_FORM RECOMMENDATION SYSTEM
- *          {Mr. AFRSys}
- *          by alexith
+ *          (Mr. AFRSys)
+ *            by alexith
+ * 
  * 
  *******************************************/
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
+
+
 
 struct ArtForm
 {
