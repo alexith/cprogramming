@@ -22,7 +22,7 @@ struct ArtForm
     int releaseYear;
     char genre[20];
     char description[200];
-    float imdbRating;
+    double imdbRating;
 };
 
 int main()
@@ -34,8 +34,8 @@ int main()
 
     char todaysSpecial[20];
     
-    const char* task;
-    char artForm[50];
+    char task;
+    const char* artForm[20];
     char artName[50];
 
     //know the user
@@ -49,33 +49,31 @@ int main()
     //taking input for task 
     scanf("choose the option key [c / f / u / d]: %c", &task);
 
-    if ((task == 'c')
+    if (strncmp(task, "c", 1))
     {
         printf("\nWhat form of art do you wish to create today ? [ enter below : movie, music, etc ] :\n");
         scanf("%s", &artForm);
 
-        if (strncmp(artForm, "movie") == "0")
+        if (strncmp(artForm, "movie", 5))
         {
             struct ArtForm movie;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
-            artName[20] = scanf("%s", &movie.name);
-            printf("You added new %s to the library\n", artName);
+            artName[35] = scanf("%s", &movie.name);
         }
-        else if (scanf("%s", &artForm) == "music")
+        else if (strncmp(artForm, "music", 5))
         {
             struct ArtForm music;
             printf("That\'s interesting,\ndo you like to specify the name of the %s:\n", artForm);
-            artName[20] = scanf("%s", &music.name);
-            printf("You added new %s to the library\n", artName);
+            artName[35] = scanf("%s", &music.name);
         }
         else
         {
             struct ArtForm others;
             printf("That\'s interesting,\n\ndo you like to specify the name of the %s:\n", artForm);
-            artName[20] = scanf("%s", &others.name);
-            printf("You added new %s to the library\n", artName);
+            artName[35] = scanf("%s", &others.name);
         }
 
+        printf("You added new %s to the library\n", &artName);
     }
 
     return 0;
