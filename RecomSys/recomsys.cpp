@@ -2,14 +2,14 @@
 #include <list>
 
 /********************************************
- * 
- * 
- *      ART_FORM RECOMMENDATION SYSTEM
- *          (Mr. AFRSys)
- *            by alexith
- * 
- * 
- *******************************************/
+*
+*
+*      ART_FORM RECOMMENDATION SYSTEM
+*          (Mr. AFRSys)
+*            by alexith
+*
+*
+*******************************************/
 
 class Artform {
     public:
@@ -20,17 +20,16 @@ class Artform {
     float imdbRating;
 };
 
-int main()
-{
+int main() {
     //inputs variables
     std::string userName;
     std::string todaysSpecial;
-    
+
     std::string task;
     std::string artForm;
     std::string artName;
 
-    std::list<std::string> artLibrary{};
+    std::list < std::string > artLibrary {};
 
 
 
@@ -46,22 +45,19 @@ int main()
 
     //user create new category of art
 
-    if (task == "c")
-    {
+    if (task == "c") {
         std::cout << "\nWhat form of art do you wish to create today ? : [for e.g. movie, music, etc]\n";
         std::cin >> artForm;
 
-        if (artForm == "movie")
-        {
+        if (artForm == "movie") {
             class Artform movie;
             std::cout << "That\'s interesting,\ndo you like to specify the name of the " + artForm + ":\n";
             std::cin >> movie.name;
             std::cout << "You added new " + movie.name + "to the library\nlets add few more info regarding " + movie.name + ", add the release year:\n";
-            
+
             std::cin >> movie.releaseYear;
         }
-        if (artForm == "music")
-        {
+        if (artForm == "music") {
             class Artform music;
             std::cout << "That\'s interesting,\ndo you like to specify the name of the " + artForm + ":\n";
             getline(std::cin, music.name);
@@ -76,19 +72,17 @@ int main()
         }
     }
 
-    if (task == "f")
-    {
+    if (task == "f") {
         std::cout << "Please enter the keyword you want to search from library: [for e.g., the big lebowski]\n";
     }
 
 
     //show current art library
-    
-    if(artLibrary.size() == 0)
-    {
+
+    if(artLibrary.size() == 0) {
         std::cout << "It's a ghost town ={ in here\n";
     }
-        else
+    else
     {
         std::cout << "Your art library has item(s) loaded\n";
     }
